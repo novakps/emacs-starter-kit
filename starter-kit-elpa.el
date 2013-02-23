@@ -9,7 +9,8 @@
                                    'yasnippet-bundle
                                    'yaml-mode
                                    'magit
-                                   'gist)
+                                   'gist
+                                   'exec-path-from-shell)
   "Libraries that should be installed by default.")
 
 (defun starter-kit-elpa-install ()

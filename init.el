@@ -45,6 +45,8 @@
 ;; Load up ELPA, the package manager
 
 (require 'package)
+(add-to-list 'package-archives
+         '("marmalade" . "http://marmalade-repo.org/packages/"))
 (package-initialize)
 (require 'starter-kit-elpa)
 
@@ -80,6 +82,9 @@
 (if (file-exists-p system-specific-config) (load system-specific-config))
 (if (file-exists-p user-specific-config) (load user-specific-config))
 (if (file-exists-p user-specific-dir)
-  (mapc #'load (directory-files user-specific-dir nil ".*el$")))
+    (mapc #'load (directory-files user-specific-dir nil ".*el$")))
+
+(when (memq window-system '(mac ns))
+  (exec-path-from-shell-initialize))
 
 ;;; init.el ends here
