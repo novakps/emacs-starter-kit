@@ -69,3 +69,11 @@
 
 ;; zap-up-to-char, forward-to-word, backward-to-word, etc
 (require 'misc)
+
+;; Jim Weirich's dark theme
+(require 'jw-dark-theme)
+
+;; mimimap
+(require 'minimap)
+
+

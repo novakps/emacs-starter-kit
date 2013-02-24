@@ -10,6 +10,7 @@
                                    'yaml-mode
                                    'magit
                                    'gist
+                                   'minimap
                                    'exec-path-from-shell)
   "Libraries that should be installed by default.")
 
